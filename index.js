@@ -1,7 +1,3 @@
-//
-// Annemone v0.1.1
-//
-
 var HID = require('node-hid');
 
 ('use strict');
@@ -104,7 +100,7 @@ class LEDController {
         return [0, 0, 0];
       } else {
         return ledMatrixFlattened[key.matrix_id];
-  }
+      }
     });
     const messages = this.generateMultiColor(arrayOfRgbValues.flat());
 
