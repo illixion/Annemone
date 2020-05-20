@@ -8,6 +8,17 @@ Currently, settings are not saved and custom LED graphics set with this module a
 
 ## How to use
 
+As a CLI program:
+
+```shell
+npm install -g annemone
+annemone single 255 0 255
+```
+
+CLI program currently supports only single color mode.
+
+As an Node package:
+
 1. Install as an npm package
 2. `var Annemone = require('annemone')`
 3. `const LEDController = new Annemone()`
@@ -20,9 +31,10 @@ Set per-key RBG value.
 
 Accepts a two-dimensional matrix with RGB values corresponding to each of the 61 keys as they appear on the keyboard.
 
-There's a delay between commands as the keyboard doesn't understand commands that are sent faster than 50ms apart. This is also compounded by the fact that HID doesn't have a high data throughput rate. Consider using the `setSingleColorLed` method if you don't need to set per-key color.
+There's a delay between commands as the keyboard doesn't understand commands that are sent faster than 50ms apart. This is also compounded by the fact that HID doesn't have high data throughput rate. Consider using the `setSingleColorLed` method if your application don't need to set per-key color.
 
 Example matrix:
+
 ```js
 [
     [255, 0, 0] // esc
