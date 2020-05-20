@@ -20,7 +20,7 @@ Set per-key RBG value.
 
 Accepts a two-dimensional matrix with RGB values corresponding to each of the 61 keys as they appear on the keyboard.
 
-There's a 50ms delay between commands, I'm still reverse engineering the music mode.
+There's a delay between commands as the keyboard doesn't understand commands that are sent faster than 50ms apart. This is also compounded by the fact that HID doesn't have a high data throughput rate. Consider using the `setSingleColorLed` method if you don't need to set per-key color.
 
 Example matrix:
 ```js
