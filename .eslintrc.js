@@ -11,6 +11,7 @@ module.exports = {
         trailingComma: 'es5',
       },
     ],
-    eqeqeq: ['error', 'always'], // adding some custom ESLint rules
+    eqeqeq: ['error', 'always'],
+    indent: ['error', 2],
   },
 };
