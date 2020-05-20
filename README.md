@@ -25,7 +25,7 @@ As an Node package:
 
 ## Available methods
 
-### Annemone.LEDController.setMultiColorLed(ledMatrix, fast_mode)
+### Annemone.LEDController.setMultiColorLed(ledMatrix)
 
 Set per-key RBG value.
 
