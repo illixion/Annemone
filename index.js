@@ -7,9 +7,12 @@ class LEDController {
     this.keyboard = (function () {
       const keyboard_info = HID.devices().find((item) => {
         return (
-          item.vendorId === 1241 &&
-          item.productId === 41619 &&
-          item.interface === 1
+          (item.vendorId === 1241 &&
+            item.productId === 41619 &&
+            item.interface === 1) ||
+          (item.vendorId === 1241 &&
+            item.productId === 32777 &&
+            item.interface === 1)
         );
       });
 
