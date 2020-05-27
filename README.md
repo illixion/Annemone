@@ -31,7 +31,7 @@ As an Node package:
 
 1. Install as an npm package
 2. `var Annemone = require('annemone')`
-3. `const LEDController = new Annemone()`
+3. `const LEDController = new Annemone.LEDController();`
 
 ## Usage example
 
@@ -74,7 +74,7 @@ Set all keys to one color.
 
 Takes an array with 3 elements: red, green and blue.
 
-Example rgb: `[255, 0, 0]`
+Example RGB: `[255, 0, 0]`
 
 #### Annemone.LEDController.generateMultiColor(arrayOfRgbValues, mcu_address = 65, command_info = [32, 3, 255, 2])
 
@@ -123,6 +123,8 @@ const LEDController = new Annemone.LEDController();
   * Changes multi set input data format to a 2D matrix
 * v0.1.2
   * Added a CLI version of Annemone
+* v0.1.3 & v0.1.4
+  * Version bumps to get the NPM registry to pull README updates
 
 ## Meta
 
