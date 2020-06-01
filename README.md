@@ -132,6 +132,8 @@ Manual – [@manualmanul](https://twitter.com/manualmanul) – hello@catto.io
 
 Distributed under the MIT license. See ``LICENSE`` for more information.
 
+See also the list of [contributors](https://github.com/manualmanul/Annemone/contributors) who participated in this project.
+
 ## Contributing
 
 1. Fork it (<https://github.com/manualmanul/annemone/fork>)
