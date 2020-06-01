@@ -26,14 +26,19 @@ class LEDController {
 
   /**
    * Sets different colors for each key
-   * @param {Array<int>} ledMatrix
+   * @param {Array<Array<int>>} ledMatrix Two-dimensional array in format [ [[esc_rgb], [1_rgb], ..., [=_rgb], [backspace_rgb]],
+   *                                                                        [[tab_rgb], [q_rgb], ..., [backslash_rgb]],
+   *                                                                        ...
+   *                                                                        [[leftctrl_rgb], ..., [rightctrl_rgb]]
+   *                                                                      ]
    * @returns {number} number of bytes actually written
    */
   setMultiColorLed(ledMatrix) {
+    const ledMatrixFlattened = ledMatrix.flat();
     const arrayOfRgbValues = LEDController.AnnePro2_layout.map((key) => {
       let rgb = [0, 0, 0];
-      if (ledMatrix[key.matrix_id]) {
-        rgb = ledMatrix[key.matrix_id];
+      if (ledMatrixFlattened[key.matrix_id]) {
+        rgb = ledMatrixFlattened[key.matrix_id];
       }
       return rgb;
     });
@@ -199,17 +204,5 @@ LEDController.AnnePro2_layout = [
 LEDController.service_data = [0, 123, 16, mcu_address];
 LEDController.static_message = [0, 0, 125];
 LEDController.command_info = [32, 3, 255];
-
-const lc = new LEDController();
-let counter = 0;
-setInterval(() => {
-  if (counter % 2 === 0) {
-    lc.setMultiColorLed([[255,0,0],[0,255,0],[0,0,255]]);
-    // lc.setSingleColorLed([0, 255, 255]);
-  } else {
-    lc.setSingleColorLed([0, 0, 0]);
-  }
-  counter++;
-}, 1000);
 
 module.exports.LEDController = LEDController;
