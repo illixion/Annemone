@@ -13,7 +13,7 @@ Currently, settings are not saved and custom LED graphics set with this module a
 
 ## Prerequisites
 
-* Node v10.x LTS or newer
+* Node v12.x LTS or newer
 * npm 6.x or newer
 * Anne Pro 2 keyboard connected over USB
 
