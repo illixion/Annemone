@@ -132,6 +132,8 @@ Manual – [@illixion](https://twitter.com/illixion) – hello@illixion.com
 
 Distributed under the MIT license. See ``LICENSE`` for more information.
 
+See also the list of [contributors](https://github.com/illixion/Annemone/contributors) who participated in this project.
+
 ## Contributing
 
 1. Fork it (<https://github.com/illixion/annemone/fork>)
