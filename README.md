@@ -120,11 +120,18 @@ const LEDController = new Annemone.LEDController();
 * v0.0.1
   * Added single and multi set modes
 * v0.1.1
-  * Changes multi set input data format to a 2D matrix
+  * Changed multi set input data format to a 2D matrix
 * v0.1.2
   * Added a CLI version of Annemone
 * v0.1.3 & v0.1.4
   * Version bumps to get the NPM registry to pull README updates
+* v0.1.5
+  * Added pid 32777
+* v0.1.6
+  * Added some docs, some static vars, improved setMultiColorLed, general code refactor
+* v0.1.7
+  * Added new productId and switched to HEX for VID and PID
+
 
 ## Meta
 
