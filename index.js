@@ -24,6 +24,25 @@ class LEDController {
     })();
   }
 
+  setIndividualKeys(matrixState) {
+
+    const arrayOfRgbValues = LEDController.AnnePro2_layout.map((key) => {
+      let rgb = [0, 0, 0];
+      if (matrixState[key]) {
+        rgb = matrixState[key]
+      }
+      return rgb;
+    });
+
+    const messages = this.generateMultiColor(arrayOfRgbValues.flat());
+
+    let sentBytes = 0;
+    for (let i = 0; i < messages.length; i++) {
+      sentBytes += this.write(messages[i]);
+    }
+    return sentBytes;
+  }
+
   /**
    * Sets different colors for each key
    * @param {Array<Array<int>>} ledMatrix Two-dimensional array in format [ [[esc_rgb], [1_rgb], ..., [=_rgb], [backspace_rgb]],
