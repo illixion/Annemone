@@ -24,12 +24,18 @@ class LEDController {
     })();
   }
 
+    /**
+   * Sets keys from object
+   * @param {Object} matrixState { esc: [rgv], 4: [rgb], f: [rgb] ... }
+   *
+   */
+
   setIndividualKeys(matrixState) {
 
     const arrayOfRgbValues = LEDController.AnnePro2_layout.map((key) => {
       let rgb = [0, 0, 0];
-      if (matrixState[key]) {
-        rgb = matrixState[key]
+      if (matrixState[key.key] != undefined) {
+        rgb = matrixState[key.key]
       }
       return rgb;
     });
