@@ -68,6 +68,12 @@ Example matrix:
 ...
 ```
 
+#### Annemone.LEDController.setIndividualKeys(matrixState)
+
+Alternative way to set individual key colors. Takes an object with each key and its corresponding color like this: { f: [255,0,0], esc: [0,255,255]}
+
+Note that this function is not aware of the current keyboard state and will turn off all LEDs not specified in the input object.
+
 #### Annemone.LEDController.setSingleColorLed(rgb)
 
 Set all keys to one color.
@@ -131,7 +137,8 @@ const LEDController = new Annemone.LEDController();
   * Added some docs, some static vars, improved setMultiColorLed, general code refactor
 * v0.1.7
   * Added new productId and switched to HEX for VID and PID
-
+* v0.1.8
+  * Added a function to set keys individually
 
 ## Meta
 
