@@ -26,10 +26,9 @@ class LEDController {
 
     /**
    * Sets keys from object
-   * @param {Object} matrixState { esc: [rgv], 4: [rgb], f: [rgb] ... }
-   *
+   * @param {Object} matrixState { esc: [rgb], 4: [rgb], f: [rgb] ... }
+   * @returns {number} number of bytes actually written
    */
-
   setIndividualKeys(matrixState) {
 
     const arrayOfRgbValues = LEDController.AnnePro2_layout.map((key) => {
