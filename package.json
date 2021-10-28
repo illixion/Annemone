@@ -1,6 +1,6 @@
 {
   "name": "annemone",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "Anne Pro 2 RGB control through Node.js",
   "main": "index.js",
   "dependencies": {
