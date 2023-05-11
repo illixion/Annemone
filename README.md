@@ -109,7 +109,7 @@ Needed due to Anne Pro 2 ignoring commands when they're sent faster than 50ms ap
 To install a local version for development purposes, use the following set of commands:
 
 ```sh
-git clone https://github.com/manualmanul/Annemone.git
+git clone https://github.com/illixion/Annemone.git
 cd Annemone
 npm i
 ```
@@ -142,15 +142,13 @@ const LEDController = new Annemone.LEDController();
 
 ## Meta
 
-Manual – [@manualmanul](https://twitter.com/manualmanul) – hello@catto.io
-
 Distributed under the MIT license. See ``LICENSE`` for more information.
 
-See also the list of [contributors](https://github.com/manualmanul/Annemone/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/illixion/Annemone/contributors) who participated in this project.
 
 ## Contributing
 
-1. Fork it (<https://github.com/manualmanul/annemone/fork>)
+1. Fork it (<https://github.com/illixion/annemone/fork>)
 2. Create your feature branch (`git checkout -b feature/fooBar`)
 3. Commit your changes (`git commit -am 'Add some fooBar'`)
 4. Push to the branch (`git push origin feature/fooBar`)
